@@ -1,0 +1,19 @@
+site_name: Entrega de Prácticas
+nav:
+  - Inicio: index.md
+  - Prácticas:
+      - Práctica 1: practica1.md
+      - Práctica 2: practica2.md
+      - Práctica 3: practica3.md
+      - Práctica 4: practica4.md
+      - Práctica 5: practica5.md
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: pink
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
