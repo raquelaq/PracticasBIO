@@ -2,7 +2,7 @@ name: Deploy MkDocs site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # Ejecuta al subir cambios a la rama 'main' (ajusta si usas otra)
+    branches: [ master ]   # Ejecuta al subir cambios a la rama 'main' (ajusta si usas otra)
 
 permissions:
   contents: read         # Permiso de lectura del repo (para checkout)
