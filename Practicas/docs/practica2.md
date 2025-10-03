@@ -38,7 +38,11 @@ en la nueva hebra. Esta mutación podría no tener ningún efecto, cambiar un am
 provocar una proteína incompleta o no funcional. Si la célula con la mutación sobrevive y se divide, es decir, se sigue 
 replicando, este error se pasará a todas sus células descendientes, lo que puede provocar enfermedades genéticas, por ejemplo.
 
-### Extensión con BioPython (poner enlace)
+### Extensión con BioPython 
+
+Se puede ver el notebook con la implementación en este enlace:
+
+[![Replicación](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/replication.ipynb)
 
 ## Ejercicio 2 - Transcripción del ADN a ARNm
 
@@ -75,7 +79,12 @@ La región codificante es la parte dentro del gen de ADN que contiene la informa
 En este caso, la región promotora no se ve, es decir, no se puede saber cuál es ya que sólo se nos ha dado la región 
 codificante, que es 3’ – TAC GGA CTT ACG – 5’.
 
-### Extensión con BioPython (PONER ENLACE)
+### Extensión con BioPython 
+
+Se puede ver el notebook con la implementación en este enlace:
+
+[![Trancripción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/transcription.ipynb)
+
 
 ## Ejercicio 3 - Traducción del ARNm a proteína
 
@@ -100,7 +109,7 @@ Los nucleótidos se leen en grupos de tres (como haría el ribosoma) llamados **
 concreto según el código genético. El codón de **AUG** corresponde con el codón de inicio, que es el que codifica para el aminoácido Metionina (Met).
 Se avanza al siguiente codón, UAU, que corresponde a Tirosonina (Tyr), y se pasa al siguiente que codifica Alanina (Ala). Finalmente,
 se llega al codón UAA, que es un codón de paro. Esto indica que la proteína está completa, por lo que la cadena polipeptídica
-formada es **Met-Tyr-Ala**
+formada es **Met-Tyr-Ala**.
 
 ### ¿Qué pasaría si el codón de inicio mutara de AUG a GUG? ¿Qué ocurriría si el codón de paro desapareciera por mutación?
 
@@ -109,3 +118,9 @@ por lo que directamente el proceso de traducción no podría comenzar.
 
 Si el codón de paro desapareciera por mutación, el ribosoma no se pararía en el punto correcto, por lo que el proceso de
 traducción seguiría hasta encontrar otro codón de parada en la secuencia.
+
+### Extensión con Biopython
+
+Se puede ver el notebook con la implementación en este enlace:
+
+[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/translation.ipynb)
