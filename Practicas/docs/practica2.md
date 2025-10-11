@@ -127,24 +127,39 @@ Se puede ver el notebook con la implementación en este enlace:
 
 ## Ejercicio 4 - Splicing alternativo
 
+El objetivo de este ejercicio es comprender cómo un mismo gen puede generar varias proteínas.
+
+Se comienza considerando un gen con 5 exones: **Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5**
+
 ### Se considera un gen con 5 exones: Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5.
 
 ### Diseño de dos combinaciones de splicing alternativo.
+
+Las combinaciones que se han diseñado son:
+
 - ARNm1: E1-E3-E4-E5
 - ARNm2: E1-E2-E3-E5
 
 ### Diferencias esperadas en las proteínas resultantes.
     
-Los exones son los segmentos de un gen que contienen la información codificante. Tras la transcripción del ADN y el proceso de maduración del ARN, estos exones seleccionados permanecen en el ARN mensajero (ARNm) final. Como el ARNm es la plantilla para la síntesis de proteínas, la combinación de exones que se mantenga determinará la secuencia de aminoácidos resultante. En este caso, al generarse dos variantes de ARNm con diferentes exones incluidos, se producen dos proteínas distintas. Cada una tendrá diferencias en su secuencia y, por tanto, pueden presentar variaciones en su tamaño, estructura y función biológica.
+Los exones son los segmentos de un gen que contienen la información codificante. Tras la transcripción del ADN y el 
+proceso de maduración del ARN, estos exones seleccionados permanecen en el ARN mensajero (ARNm) final. Como el ARNm es 
+la plantilla para la síntesis de proteínas, la combinación de exones que se mantenga determinará la secuencia de aminoácidos
+resultante. En este caso, al generarse dos variantes de ARNm con diferentes exones incluidos, se producen dos proteínas distintas. 
+Cada proteína tendrá diferencias en su secuencia y, por tanto, pueden presentar variaciones en su tamaño, estructura y 
+función biológica.
 
     
 ### ¿Por qué este mecanismo aumenta la diversidad proteica sin necesidad de más genes?
     
-Porque un mismo gen puede combinar sus exones de distintas maneras. Cada combinación origina un ARNm distinto y, en consecuencia, una proteína diferente. Esto permite que a partir de un número limitado de genes se generen muchas más variantes proteicas, aumentando la complejidad y funcionalidad del conjunto de proteínas de un organismo sin necesidad de ampliar el conjunto total de sus genes.
+Esto ocurre porque un mismo gen puede combinar sus exones de distintas maneras. Cada combinación origina un ARNm distinto y, en 
+consecuencia, una proteína diferente. Esto permite que a partir de un número limitado de genes se generen muchas más 
+variantes proteicas, aumentando la complejidad y funcionalidad del conjunto de proteínas de un organismo sin necesidad 
+de ampliar el conjunto total de sus genes.
     
 ### Extensión con Biopython / bases de datos:
     
-**Busca en Ensembl un gen humano conocido con isoformas (por ejemplo, FGFR2) y compara sus diferentes transcritos. Reflexiona sobre cómo estas diferencias podrían afectar a la función de la proteína.**
+**En este apartado, se propone buscar en Ensembl un gen humano conocido con isoformas (por ejemplo, FGFR2) y comparar sus diferentes transcritos. Además, se debe reflexionar sobre cómo estas diferencias podrían afectar a la función de la proteína.**
 
 En la base de datos Ensembl se identifican múltiples transcritos del gen FGFR2, entre ellos las isoformas FGFR2-IIIb (ENST00000351936 o FGFR2-203) y FGFR2-IIIc (ENST00000356226 o FGFR2-204), que se diferencian en la inclusión de un exón específico durante el procesamiento del ARN mensajero.
 
@@ -158,14 +173,24 @@ Funcionalmente, esta diferencia tiene consecuencias biológicas importantes:
 
 Así, un mismo gen puede generar proteínas con funciones distintas, ajustadas a las necesidades del tejido donde se expresan. Este mecanismo demuestra cómo el splicing alternativo amplía la diversidad proteica sin necesidad de aumentar el número de genes, y cómo pequeños cambios estructurales en la secuencia del ARNm pueden tener un gran impacto en la función biológica de la proteína resultante.
 
+Este análisis muestra cómo una simple búsqueda en bases de datos genómicas como Ensembl permite explorar la relación entre variaciones en el ARNm y sus efectos funcionales en la proteína.
+
 ## Ejercicio 5 -  Introducción a las proteínas
 
-### Dada la siguiente secuencia de aminoácidos: Met – Ile – Ser – Gly – Val – Lys – His.
+El objetivo de este ejercicio es relacionar secuencia, estructura y función de una proteína.
 
-### Identifica el extremo N y el extremo C de la cadena.
+Se comienza considerando la siguiente secuencia de aminoácidos: **Met – Ile – Ser – Gly – Val – Lys – His**.
 
-- El extremo N (amino) siempre corresponde al primer aminoácido de la cadena, en este caso Met (metionina).
-- El extremo C (carboxilo) corresponde al último aminoácido de la cadena, en este caso His (histidina).
+### Identificación del extremo N y el extremo C de la cadena.
+
+Cuando una proteína se forma, los aminoácidos se unen entre sí mediante enlaces peptídicos, que conectan el grupo 
+carboxilo (-COOH) de un aminoácido con el grupo amino (-NH₂) del siguiente.
+
+Las secuencias de proteínas se escriben desde el extremo **N- terminal** hasta el extremo **C-terminal.** 
+
+- El extremo N (amino) siempre corresponde al primer aminoácido de la cadena, que es el que conserva su grupo amino libre. En este caso, ese aminoácido es Met (metionina) que, además, suele ser el aminoácido inicial en la síntesis de proteínas en los organismos vivos.
+- El extremo C (carboxilo) corresponde al último aminoácido de la cadena, que conserva su grupo carboxilo libre. En este caso, es His (histidina).
+
 
 ### ¿Cómo influye el orden de los aminoácidos en la estructura final de la proteína? ¿Qué ocurriría si hubiera una mutación que cambiara un aminoácido hidrofóbico por uno hidrofílico en una región interna de la proteína?**
     
@@ -173,9 +198,10 @@ El orden de los aminoácidos determina cómo la cadena se pliega sobre sí misma
     
 Si en la parte interna de la proteína (donde normalmente se sitúan los aminoácidos hidrofóbicos para evitar el contacto con el agua) aparece un aminoácido hidrofílico, se rompe ese equilibrio. Esto puede desestabilizar el plegamiento, hacer que la proteína cambie de forma o incluso que pierda su función. En algunos casos, la proteína puede agregarse o degradarse porque ya no es estable.
 
-**Extensión con bioinformática:** Busca en el Protein Data Bank (PDB) la estructura de una proteína conocida y observa cómo los aminoácidos se organizan en hélices alfa y láminas beta. Reflexiona sobre cómo una mutación puntual podría afectar al plegamiento.
+### Extensión con bioinformática
+**Buscar en el Protein Data Bank (PDB) la estructura de una proteína conocida y observar cómo los aminoácidos se organizan en hélices alfa y láminas beta. Reflexionar sobre cómo una mutación puntual podría afectar al plegamiento.**
 
-La proteína que vamos a usar es la hemoglobina humana: 
+La proteína que se va a usar es la hemoglobina humana (Figura 4): 
 
 ![Hemoglobina](images/hemoglobina.png)
 *Figura 4. Estructura 3D de la Hemoglobina Humana*
@@ -191,11 +217,13 @@ Una mutación puntual en la hemoglobina puede tener un impacto significativo en 
 
 En términos de plegamiento, una mutación puntual puede alterar la estabilidad de una hélice alfa o interrumpir las interacciones entre las cadenas de la proteína, afectando el ensamblaje global y la función de la hemoglobina. Esto también podría generar una proteína mal plegada que se degrade rápidamente, reduciendo la cantidad funcional de hemoglobina en la sangre.
 
-En resumen, una mutación puntual en una proteína como la hemoglobina puede cambiar tanto su estructura primaria (la secuencia de aminoácidos) como su estructura secundaria (hélices alfa y láminas beta), afectando gravemente su capacidad para realizar su función biológica esencial.
+Incluso una pequeña alteración en la secuencia de aminoácidos puede tener consecuencias drásticas sobre la estructura y función de una proteína. En el caso de la hemoglobina, esta muestra cómo un solo cambio puntual puede transformar una molécula perfectamente funcional en una que compromete la salud del organismo. 
 
 ## Ejercicio 6 - Actividad integradora: del ADN a la proteína
 
-Dado el gen FGFR2: **AAG TGA CTG CAG CAG CAG CGG CAG** 
+Finalmente, con este ejercicio se busca recorrer el dogma central por completo.
+
+Se comienza con el gen FGFR2: **AAG TGA CTG CAG CAG CAG CGG CAG** 
     
 ### Replicación la secuencia indicando las dos nuevas hebras.
 - Hebra original: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
@@ -231,8 +259,8 @@ Transcripción:
 El punto más vulnerable es la traducción. Durante este proceso, un error en la lectura de los codones o un cambio en el ARNm (mutación, codón de stop prematuro, inserción o deleción) altera directamente la secuencia de aminoácidos. Como el orden de aminoácidos define el plegamiento y la función de la proteína, cualquier error aquí tiene un efecto inmediato en su actividad o estabilidad.
     
 Errores en replicación o transcripción pueden corregirse o no siempre afectan a la proteína final, pero un fallo en traducción suele impactar de forma directa en la función proteica.
-    
-**Extensión**: programa un pipeline que realice los tres procesos (replicación, transcripción, y traducción).
+   
+### Extensión con Biopython 
 
 [![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/pipeline.ipynb)
 

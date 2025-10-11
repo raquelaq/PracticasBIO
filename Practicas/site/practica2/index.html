@@ -389,9 +389,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-con-biopython-poner-enlace" class="md-nav__link">
+  <a href="#extension-con-biopython" class="md-nav__link">
     <span class="md-ellipsis">
-      Extensión con BioPython (poner enlace)
+      Extensión con BioPython
     </span>
   </a>
   
@@ -440,9 +440,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-con-biopython-poner-enlace_1" class="md-nav__link">
+  <a href="#extension-con-biopython_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Extensión con BioPython (PONER ENLACE)
+      Extensión con BioPython
     </span>
   </a>
   
@@ -485,6 +485,15 @@
   <a href="#que-pasaria-si-el-codon-de-inicio-mutara-de-aug-a-gug-que-ocurriria-si-el-codon-de-paro-desapareciera-por-mutacion" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Qué pasaría si el codón de inicio mutara de AUG a GUG? ¿Qué ocurriría si el codón de paro desapareciera por mutación?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-con-biopython_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensión con Biopython
     </span>
   </a>
   
@@ -635,9 +644,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-con-biopython-poner-enlace" class="md-nav__link">
+  <a href="#extension-con-biopython" class="md-nav__link">
     <span class="md-ellipsis">
-      Extensión con BioPython (poner enlace)
+      Extensión con BioPython
     </span>
   </a>
   
@@ -686,9 +695,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-con-biopython-poner-enlace_1" class="md-nav__link">
+  <a href="#extension-con-biopython_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Extensión con BioPython (PONER ENLACE)
+      Extensión con BioPython
     </span>
   </a>
   
@@ -731,6 +740,15 @@
   <a href="#que-pasaria-si-el-codon-de-inicio-mutara-de-aug-a-gug-que-ocurriria-si-el-codon-de-paro-desapareciera-por-mutacion" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Qué pasaría si el codón de inicio mutara de AUG a GUG? ¿Qué ocurriría si el codón de paro desapareciera por mutación?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-con-biopython_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensión con Biopython
     </span>
   </a>
   
@@ -788,7 +806,9 @@ formada por una hebra del ADN original, y una hebra recién sintetizada, lo que 
 en la nueva hebra. Esta mutación podría no tener ningún efecto, cambiar un aminoácido y alterar la proteína, o bien 
 provocar una proteína incompleta o no funcional. Si la célula con la mutación sobrevive y se divide, es decir, se sigue 
 replicando, este error se pasará a todas sus células descendientes, lo que puede provocar enfermedades genéticas, por ejemplo.</p>
-<h3 id="extension-con-biopython-poner-enlace">Extensión con BioPython (poner enlace)</h3>
+<h3 id="extension-con-biopython">Extensión con BioPython</h3>
+<p>Se puede ver el notebook con la implementación en este enlace:</p>
+<p><a href="https://github.com/raquelaq/Practica2BIO/blob/master/replication.ipynb"><img alt="Replicación" src="https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github" /></a></p>
 <h2 id="ejercicio-2-transcripcion-del-adn-a-arnm">Ejercicio 2 - Transcripción del ADN a ARNm</h2>
 <p>El objetivo de este ejercicio es traducir correctamente la información de la cadena molde.</p>
 <p>Para empezar, se tiene la siguiente secuencia de ADN: <strong>5’ – ATG CCT GAA TGC – 3’ / 3’ – TAC GGA CTT ACG – 5’</strong></p>
@@ -811,7 +831,9 @@ para la posterior síntesis de proteínas.</p>
 <p>La región codificante es la parte dentro del gen de ADN que contiene la información necesaria para fabricar una proteína.</p>
 <p>En este caso, la región promotora no se ve, es decir, no se puede saber cuál es ya que sólo se nos ha dado la región 
 codificante, que es 3’ – TAC GGA CTT ACG – 5’.</p>
-<h3 id="extension-con-biopython-poner-enlace_1">Extensión con BioPython (PONER ENLACE)</h3>
+<h3 id="extension-con-biopython_1">Extensión con BioPython</h3>
+<p>Se puede ver el notebook con la implementación en este enlace:</p>
+<p><a href="https://github.com/raquelaq/Practica2BIO/blob/master/transcription.ipynb"><img alt="Trancripción" src="https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github" /></a></p>
 <h2 id="ejercicio-3-traduccion-del-arnm-a-proteina">Ejercicio 3 - Traducción del ARNm a proteína</h2>
 <p>El objetivo de este ejercicio es aplicar el código genético y reflexionar sobre mutaciones.</p>
 <p>Se comienza con el siguiente transcrito de ARN: <strong>5’ – AUG UAU GCU UAA – 3’</strong>.</p>
@@ -826,12 +848,15 @@ codificante, que es 3’ – TAC GGA CTT ACG – 5’.</p>
 concreto según el código genético. El codón de <strong>AUG</strong> corresponde con el codón de inicio, que es el que codifica para el aminoácido Metionina (Met).
 Se avanza al siguiente codón, UAU, que corresponde a Tirosonina (Tyr), y se pasa al siguiente que codifica Alanina (Ala). Finalmente,
 se llega al codón UAA, que es un codón de paro. Esto indica que la proteína está completa, por lo que la cadena polipeptídica
-formada es <strong>Met-Tyr-Ala</strong></p>
+formada es <strong>Met-Tyr-Ala</strong>.</p>
 <h3 id="que-pasaria-si-el-codon-de-inicio-mutara-de-aug-a-gug-que-ocurriria-si-el-codon-de-paro-desapareciera-por-mutacion">¿Qué pasaría si el codón de inicio mutara de AUG a GUG? ¿Qué ocurriría si el codón de paro desapareciera por mutación?</h3>
 <p>Si el codón de inicio mutara de AUG a GUG, como no es la combinación que corresponde a Metionina, no se consideraría codón de inicio,
 por lo que directamente el proceso de traducción no podría comenzar.</p>
 <p>Si el codón de paro desapareciera por mutación, el ribosoma no se pararía en el punto correcto, por lo que el proceso de
 traducción seguiría hasta encontrar otro codón de parada en la secuencia.</p>
+<h3 id="extension-con-biopython_2">Extensión con Biopython</h3>
+<p>Se puede ver el notebook con la implementación en este enlace:</p>
+<p><a href="https://github.com/raquelaq/Practica2BIO/blob/master/translation.ipynb"><img alt="Traducción" src="https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github" /></a></p>
 
 
 
