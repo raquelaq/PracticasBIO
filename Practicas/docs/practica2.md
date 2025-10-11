@@ -124,3 +124,24 @@ traducción seguiría hasta encontrar otro codón de parada en la secuencia.
 Se puede ver el notebook con la implementación en este enlace:
 
 [![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/translation.ipynb)
+
+## Ejercicio 4
+
+### Se Considera un gen con 5 exones: Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5.
+
+### Diseño de dos combinaciones de splicing alternativo.
+    - ARNm1: E1-E3-E4-E5
+    - ARNm2: E1-E2-E3-E5
+
+### Diferencias esperadas en las proteínas resultantes.
+    
+    Los exones son los segmentos de un gen que contienen la información codificante. Tras la transcripción del ADN y el proceso de maduración del ARN, estos exones seleccionados permanecen en el ARN mensajero (ARNm) final. Como el ARNm es la plantilla para la síntesis de proteínas, la combinación de exones que se mantenga determinará la secuencia de aminoácidos resultante. En este caso, al generarse dos variantes de ARNm con diferentes exones incluidos, se producen dos proteínas distintas. Cada una tendrá diferencias en su secuencia y, por tanto, pueden presentar variaciones en su tamaño, estructura y función biológica.
+    
+### ¿Por qué este mecanismo aumenta la diversidad proteica sin necesidad de más genes?
+    
+    Porque un mismo gen puede combinar sus exones de distintas maneras. Cada combinación origina un ARNm distinto y, en consecuencia, una proteína diferente. Esto permite que a partir de un número limitado de genes se generen muchas más variantes proteicas, aumentando la complejidad y funcionalidad del conjunto de proteínas de un organismo sin necesidad de ampliar el conjunto total de sus genes.
+    
+    Extensión con Biopython / bases de datos:
+    Busca en Ensembl un gen humano conocido con isoformas (por ejemplo, FGFR2) y compara sus
+    diferentes transcritos. Reflexiona sobre cómo estas diferencias podrían afectar a la función de la
+    proteína.
