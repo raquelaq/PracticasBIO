@@ -173,7 +173,7 @@ Así, un mismo gen puede generar proteínas con funciones distintas, ajustadas a
 
 Este análisis muestra cómo una simple búsqueda en bases de datos genómicas como Ensembl permite explorar la relación entre variaciones en el ARNm y sus efectos funcionales en la proteína.
 
-A continuación, se realizó una búsqueda en la base de datos NCBI utilizando Biopython, para identificar las distintas 
+A continuación, se ha considerado que sería interesante realizar una búsqueda en la base de datos NCBI utilizando Biopython, para identificar las distintas 
 secuencias anotadas del gen FGFR2 en humanos.
 Las diferentes entradas recuperadas corresponden a los distintos transcritos e isoformas del gen, confirmando lo 
 observado en Ensembl (por ejemplo, FGFR2-IIIb y FGFR2-IIIc).
