@@ -192,7 +192,7 @@ Las secuencias de proteínas se escriben desde el extremo **N- terminal** hasta 
 - El extremo C (carboxilo) corresponde al último aminoácido de la cadena, que conserva su grupo carboxilo libre. En este caso, es His (histidina).
 
 
-### ¿Cómo influye el orden de los aminoácidos en la estructura final de la proteína? ¿Qué ocurriría si hubiera una mutación que cambiara un aminoácido hidrofóbico por uno hidrofílico en una región interna de la proteína?**
+### Influencia del orden de los aminoácidos en la estructura final de la proteína. ¿Qué ocurriría si hubiera una mutación que cambiara un aminoácido hidrofóbico por uno hidrofílico en una región interna de la proteína?
     
 El orden de los aminoácidos determina cómo la cadena se pliega sobre sí misma. Cada aminoácido tiene propiedades diferentes (puede ser cargado, hidrofóbico, grande o pequeño) y estas características hacen que la cadena adopte una forma concreta. Esa forma es la que define la estructura final de la proteína y, por lo tanto, su función. Si se cambia el orden, la proteína puede plegarse distinto y funcionar de otra manera o incluso perder su función.
     
@@ -201,7 +201,7 @@ Si en la parte interna de la proteína (donde normalmente se sitúan los aminoá
 ### Extensión con bioinformática
 **Buscar en el Protein Data Bank (PDB) la estructura de una proteína conocida y observar cómo los aminoácidos se organizan en hélices alfa y láminas beta. Reflexionar sobre cómo una mutación puntual podría afectar al plegamiento.**
 
-La proteína que se va a usar es la hemoglobina humana (Figura 4): 
+La proteína que se va a usar es la hemoglobina humana (**Figura 4**): 
 
 ![Hemoglobina](images/hemoglobina.png)
 *Figura 4. Estructura 3D de la Hemoglobina Humana*
@@ -261,6 +261,8 @@ El punto más vulnerable es la traducción. Durante este proceso, un error en la
 Errores en replicación o transcripción pueden corregirse o no siempre afectan a la proteína final, pero un fallo en traducción suele impactar de forma directa en la función proteica.
    
 ### Extensión con Biopython 
+
+Se puede ver el notebook con la implementación en este enlace: 
 
 [![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/pipeline.ipynb)
 
