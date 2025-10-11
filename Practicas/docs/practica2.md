@@ -125,23 +125,114 @@ Se puede ver el notebook con la implementación en este enlace:
 
 [![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/translation.ipynb)
 
-## Ejercicio 4
+## Ejercicio 4 - Splicing alternativo
 
-### Se Considera un gen con 5 exones: Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5.
+### Se considera un gen con 5 exones: Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5.
 
 ### Diseño de dos combinaciones de splicing alternativo.
-    - ARNm1: E1-E3-E4-E5
-    - ARNm2: E1-E2-E3-E5
+- ARNm1: E1-E3-E4-E5
+- ARNm2: E1-E2-E3-E5
 
 ### Diferencias esperadas en las proteínas resultantes.
     
-    Los exones son los segmentos de un gen que contienen la información codificante. Tras la transcripción del ADN y el proceso de maduración del ARN, estos exones seleccionados permanecen en el ARN mensajero (ARNm) final. Como el ARNm es la plantilla para la síntesis de proteínas, la combinación de exones que se mantenga determinará la secuencia de aminoácidos resultante. En este caso, al generarse dos variantes de ARNm con diferentes exones incluidos, se producen dos proteínas distintas. Cada una tendrá diferencias en su secuencia y, por tanto, pueden presentar variaciones en su tamaño, estructura y función biológica.
+Los exones son los segmentos de un gen que contienen la información codificante. Tras la transcripción del ADN y el proceso de maduración del ARN, estos exones seleccionados permanecen en el ARN mensajero (ARNm) final. Como el ARNm es la plantilla para la síntesis de proteínas, la combinación de exones que se mantenga determinará la secuencia de aminoácidos resultante. En este caso, al generarse dos variantes de ARNm con diferentes exones incluidos, se producen dos proteínas distintas. Cada una tendrá diferencias en su secuencia y, por tanto, pueden presentar variaciones en su tamaño, estructura y función biológica.
+
     
 ### ¿Por qué este mecanismo aumenta la diversidad proteica sin necesidad de más genes?
     
-    Porque un mismo gen puede combinar sus exones de distintas maneras. Cada combinación origina un ARNm distinto y, en consecuencia, una proteína diferente. Esto permite que a partir de un número limitado de genes se generen muchas más variantes proteicas, aumentando la complejidad y funcionalidad del conjunto de proteínas de un organismo sin necesidad de ampliar el conjunto total de sus genes.
+Porque un mismo gen puede combinar sus exones de distintas maneras. Cada combinación origina un ARNm distinto y, en consecuencia, una proteína diferente. Esto permite que a partir de un número limitado de genes se generen muchas más variantes proteicas, aumentando la complejidad y funcionalidad del conjunto de proteínas de un organismo sin necesidad de ampliar el conjunto total de sus genes.
     
-    Extensión con Biopython / bases de datos:
-    Busca en Ensembl un gen humano conocido con isoformas (por ejemplo, FGFR2) y compara sus
-    diferentes transcritos. Reflexiona sobre cómo estas diferencias podrían afectar a la función de la
-    proteína.
+### Extensión con Biopython / bases de datos:
+    
+**Busca en Ensembl un gen humano conocido con isoformas (por ejemplo, FGFR2) y compara sus diferentes transcritos. Reflexiona sobre cómo estas diferencias podrían afectar a la función de la proteína.**
+
+En la base de datos Ensembl se identifican múltiples transcritos del gen FGFR2, entre ellos las isoformas FGFR2-IIIb (ENST00000351936 o FGFR2-203) y FGFR2-IIIc (ENST00000356226 o FGFR2-204), que se diferencian en la inclusión de un exón específico durante el procesamiento del ARN mensajero.
+
+En la isoforma FGFR2-IIIb, se incluye el exón 8, mientras que en FGFR2-IIIc se omite este y se incorpora el exón 9. Este cambio afecta directamente la región extracelular del receptor, concretamente el dominio de unión al ligando. Aunque ambas isoformas codifican proteínas similares, la sustitución de un exón modifica la secuencia de aminoácidos de este dominio, alterando su forma tridimensional y, por tanto, su capacidad para reconocer y unirse a diferentes ligandos de la familia FGF (Fibroblast Growth Factors).
+
+Funcionalmente, esta diferencia tiene consecuencias biológicas importantes:
+
+- FGFR2-IIIb se expresa principalmente en tejidos epiteliales y reconoce ligandos como FGF7 y FGF10.
+
+- FGFR2-IIIc se expresa en tejidos mesenquimatosos y se une preferentemente a FGF2 y FGF9.
+
+Así, un mismo gen puede generar proteínas con funciones distintas, ajustadas a las necesidades del tejido donde se expresan. Este mecanismo demuestra cómo el splicing alternativo amplía la diversidad proteica sin necesidad de aumentar el número de genes, y cómo pequeños cambios estructurales en la secuencia del ARNm pueden tener un gran impacto en la función biológica de la proteína resultante.
+
+## Ejercicio 5 -  Introducción a las proteínas
+
+### Dada la siguiente secuencia de aminoácidos: Met – Ile – Ser – Gly – Val – Lys – His.
+
+### Identifica el extremo N y el extremo C de la cadena.
+
+- El extremo N (amino) siempre corresponde al primer aminoácido de la cadena, en este caso Met (metionina).
+- El extremo C (carboxilo) corresponde al último aminoácido de la cadena, en este caso His (histidina).
+
+### ¿Cómo influye el orden de los aminoácidos en la estructura final de la proteína? ¿Qué ocurriría si hubiera una mutación que cambiara un aminoácido hidrofóbico por uno hidrofílico en una región interna de la proteína?**
+    
+El orden de los aminoácidos determina cómo la cadena se pliega sobre sí misma. Cada aminoácido tiene propiedades diferentes (puede ser cargado, hidrofóbico, grande o pequeño) y estas características hacen que la cadena adopte una forma concreta. Esa forma es la que define la estructura final de la proteína y, por lo tanto, su función. Si se cambia el orden, la proteína puede plegarse distinto y funcionar de otra manera o incluso perder su función.
+    
+Si en la parte interna de la proteína (donde normalmente se sitúan los aminoácidos hidrofóbicos para evitar el contacto con el agua) aparece un aminoácido hidrofílico, se rompe ese equilibrio. Esto puede desestabilizar el plegamiento, hacer que la proteína cambie de forma o incluso que pierda su función. En algunos casos, la proteína puede agregarse o degradarse porque ya no es estable.
+
+**Extensión con bioinformática:** Busca en el Protein Data Bank (PDB) la estructura de una proteína conocida y observa cómo los aminoácidos se organizan en hélices alfa y láminas beta. Reflexiona sobre cómo una mutación puntual podría afectar al plegamiento.
+
+La proteína que vamos a usar es la hemoglobina humana: 
+
+![Hemoglobina](images/hemoglobina.png)
+*Figura 4. Estructura 3D de la Hemoglobina Humana*
+
+
+La estructura 3D de la hemoglobina humana muestra una organización compleja de hélices alfa y láminas beta. La hemoglobina es una proteína globular que transporta oxígeno en la sangre. Esta proteína está compuesta por cuatro subunidades: dos alfa y dos beta. Las subunidades están formadas principalmente por hélices alfa, que son estructuras en forma de hélice muy comunes en las proteínas, y entre estas, también pueden encontrarse regiones de láminas beta en las zonas de enlace de las cadenas polipeptídicas.
+
+Las hélices alfa de la hemoglobina, representadas por las zonas de color en la estructura, son responsables de la interacción con el oxígeno, ya que el oxígeno se une a los átomos de hierro en el centro de los grupos hemo presentes en cada subunidad. Las láminas beta en la hemoglobina, aunque no son tan prominentes como las hélices, ayudan a estabilizar la estructura y facilitan el plegamiento global de la proteína.
+
+**Reflexión sobre las mutaciones puntuales:**
+
+Una mutación puntual en la hemoglobina puede tener un impacto significativo en su plegamiento y funcionamiento. Por ejemplo, en la anemia falciforme, una mutación puntual en el gen de la hemoglobina, en la que un solo aminoácido cambia (ácido glutámico por valina en la posición 6 de la cadena beta), provoca que las moléculas de hemoglobina se agruden y formen fibras rígidas bajo condiciones de baja oxigenación. Esto altera la conformación normal de la proteína, lo que interfiere con su capacidad para transportar oxígeno de manera eficiente y causa la deformación de los glóbulos rojos, dándoles una forma de hoz.
+
+En términos de plegamiento, una mutación puntual puede alterar la estabilidad de una hélice alfa o interrumpir las interacciones entre las cadenas de la proteína, afectando el ensamblaje global y la función de la hemoglobina. Esto también podría generar una proteína mal plegada que se degrade rápidamente, reduciendo la cantidad funcional de hemoglobina en la sangre.
+
+En resumen, una mutación puntual en una proteína como la hemoglobina puede cambiar tanto su estructura primaria (la secuencia de aminoácidos) como su estructura secundaria (hélices alfa y láminas beta), afectando gravemente su capacidad para realizar su función biológica esencial.
+
+## Ejercicio 6 - Actividad integradora: del ADN a la proteína
+
+Dado el gen FGFR2: **AAG TGA CTG CAG CAG CAG CGG CAG** 
+    
+### Replicación la secuencia indicando las dos nuevas hebras.
+- Hebra original: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+- Hebra complementaria: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
+    
+Replicación: 
+    
+- Hebra original complementaria: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
+- Hebra complementaria: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+
+
+### Transcripción la cadena molde en ARNm.
+    
+ADN Original: 
+    
+- 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+- 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’ (cadena molde)
+    
+Transcripción: 
+    
+- 5’–AAG UGA CUG CAG CAG CAG CGG CAG–3’ (ARNm)
+- 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
+
+### Traducción del ARNm en una cadena de aminoácidos.
+    
+- 5’–AAG UGA CUG CAG CAG CAG CGG CAG–3’ (ARNm)
+- Lis - codón de paro - Leu - Gln - Gln - Gln - Arg - Gln
+    - Lysina - codón de paro - Leucina - Glutamina (x3) - Arginina - Glutamina
+
+
+### ¿Qué punto del proceso es más vulnerable a errores que afecten a la función de la proteína?
+    
+El punto más vulnerable es la traducción. Durante este proceso, un error en la lectura de los codones o un cambio en el ARNm (mutación, codón de stop prematuro, inserción o deleción) altera directamente la secuencia de aminoácidos. Como el orden de aminoácidos define el plegamiento y la función de la proteína, cualquier error aquí tiene un efecto inmediato en su actividad o estabilidad.
+    
+Errores en replicación o transcripción pueden corregirse o no siempre afectan a la proteína final, pero un fallo en traducción suele impactar de forma directa en la función proteica.
+    
+**Extensión**: programa un pipeline que realice los tres procesos (replicación, transcripción, y traducción).
+
+[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/pipeline.ipynb)
+
