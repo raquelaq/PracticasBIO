@@ -131,8 +131,6 @@ El objetivo de este ejercicio es comprender cómo un mismo gen puede generar var
 
 Se comienza considerando un gen con 5 exones: **Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5**
 
-### Se considera un gen con 5 exones: Exón 1 – Exón 2 – Exón 3 – Exón 4 – Exón 5.
-
 ### Diseño de dos combinaciones de splicing alternativo.
 
 Las combinaciones que se han diseñado son:
