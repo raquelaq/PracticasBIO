@@ -42,7 +42,7 @@ replicando, este error se pasará a todas sus células descendientes, lo que pue
 
 Se puede ver el notebook con la implementación en este enlace:
 
-[![Replicación](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/replication.ipynb)
+[![Replicación](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/replication.ipynb)
 
 ## Ejercicio 2 - Transcripción del ADN a ARNm
 
@@ -83,7 +83,7 @@ codificante, que es 3’ – TAC GGA CTT ACG – 5’.
 
 Se puede ver el notebook con la implementación en este enlace:
 
-[![Trancripción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/transcription.ipynb)
+[![Trancripción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/transcription.ipynb)
 
 
 ## Ejercicio 3 - Traducción del ARNm a proteína
@@ -123,7 +123,7 @@ traducción seguiría hasta encontrar otro codón de parada en la secuencia.
 
 Se puede ver el notebook con la implementación en este enlace:
 
-[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/translation.ipynb)
+[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/translation.ipynb)
 
 ## Ejercicio 4 - Splicing alternativo
 
@@ -264,5 +264,5 @@ Errores en replicación o transcripción pueden corregirse o no siempre afectan 
 
 Se puede ver el notebook con la implementación en este enlace: 
 
-[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://github.com/raquelaq/Practica2BIO/blob/master/pipeline.ipynb)
+[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/pipeline.ipynb)
 
