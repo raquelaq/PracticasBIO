@@ -65,7 +65,7 @@ de De Bruijn será el que se puede ver en la Figura 1:
 
 ### Camino Euleriano
 
-Ahora que el grafo de De Bruijn está construido, se podrá comprobar si existe un camino eulariano para poder reconstruir 
+Ahora que el grafo de De Bruijn está construido, se podrá comprobar si existe un camino euleriano para poder reconstruir 
 la secuencia.
 
 Un **camino euleriano** es un recorrido dentro de un grafo que **pasa exactamente una vez por cada arista**. En un grafo 
@@ -89,15 +89,15 @@ Por tanto, se pasa a comprobar si los nodos del camino cumplen con dichas condic
 - **GT:** entrada = 2, salida = 2
 - **TT:** entrada = 1, salida = 1
 - **TA:** entrada = 2, salida = 2
-- **CT:** entrada = 1, salida = 2
-- **AT:** entrada = 2, salida = 2
+- **CT:** entrada = 1, salida = 1
+- **AT:** entrada = 1, salida = 1
 - **TG:** entrada = 2, salida = 1 → Nodo de fin (entrada = salida + 1)
 
 El resto de nodos están equilibrados (entrada = salida), y el grafo está conectado por las aristas relevantes.
 
 **Camino euleriano:** GA → AC → CG → GT → TT → TA → AC → CT → TA → AT → TG → GT → TG
 
-Por tanto, se cumple con las condiciones indicadas, así que existe un camino euleriano y se puede hacer la reconsctrucción.
+Por tanto, se cumple con las condiciones indicadas, así que existe un camino euleriano y se puede hacer la reconstrucción.
 
 ### Reconstrucción
 
@@ -144,7 +144,7 @@ El resultado es el que se puede observar en la **Tabla 3**:
 
 ### Construcción del grafo de De Bruijn
 
-Los prefijos y sufijos el conjunto de nodos que conformará el grafo de De Bruijn será: {AGT, GTC, TCA, CAG, AGT, GTT, TTG},
+Los prefijos y sufijos el conjunto de nodos que conformará el grafo de De Bruijn será: {AGT, GTC, TCA, CAG, GTT, TTG},
 y el grafo de De Bruijn será el que se puede ver en la Figura 3:
 
 ![Grafo de De Bruijn](images/grafo2.png)
@@ -179,3 +179,8 @@ Para comprobar que la reconstrucción está bien, se hace lo mismo que se hizo a
 *Figura 4. Grafo de De Bruijn*
 
 Como se ve en la **Figura 4**, todas las lecturas originales aparecen como subcadenas en la secuencia ensamblada.
+
+Con De Bruijn modelamos las superposiciones locales (k−1) y reducimos el ensamblaje a encontrar un camino euleriano que
+recorra cada lectura exactamente una vez. Verificar los grados de entrada/salida identifica el posible inicio y final,
+y la reconstrucción se obtiene concatenando un carácter por arista. Este enfoque es robusto y escalable: admite 
+multiplicidades, ramas y bulbos cuando hay errores o repeticiones, y sirve de base para ensambladores modernos.
