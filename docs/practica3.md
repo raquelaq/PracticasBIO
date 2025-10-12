@@ -167,7 +167,7 @@ El resto de nodos están equilibrados (entrada = salida), y el grafo está conec
 
 **Camino euleriano:** AGT → GTC → TCA → CAG → AGT → GTT → TTG
 
-Por tanto, se cumple con las condiciones indicadas, así que existe un camino euleriano y se puede hacer la reconsctrucción.
+Por tanto, se cumple con las condiciones indicadas, así que existe un camino euleriano y se puede hacer la reconstrucción.
 
 ### Reconstrucción
 
@@ -176,7 +176,7 @@ El resultado de la reconstrucción es **AGTCAGTTG**.
 Para comprobar que la reconstrucción está bien, se hace lo mismo que se hizo anteriormente en la Figura 2.
 
 ![Comparación](images/comparacion2.png)
-*Figura 4. Grafo de De Bruijn*
+*Figura 4. Subcadenas*
 
 Como se ve en la **Figura 4**, todas las lecturas originales aparecen como subcadenas en la secuencia ensamblada.
 
