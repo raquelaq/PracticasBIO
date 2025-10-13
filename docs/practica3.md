@@ -184,3 +184,122 @@ Con De Bruijn modelamos las superposiciones locales (k−1) y reducimos el ensam
 recorra cada lectura exactamente una vez. Verificar los grados de entrada/salida identifica el posible inicio y final,
 y la reconstrucción se obtiene concatenando un carácter por arista. Este enfoque es robusto y escalable: admite 
 multiplicidades, ramas y bulbos cuando hay errores o repeticiones, y sirve de base para ensambladores modernos.
+
+## Cuestión 3
+
+En este último ejercicio se aborda un caso más complejo del ensamblaje genómico mediante grafos de De Bruijn.
+
+A diferencia de los anteriores, aquí el objetivo no es solo reconstruir la secuencia original, sino identificar los problemas que aparecen cuando existen repeticiones o errores en las lecturas, los cuales hacen que el grafo presente ambigüedades y no sea posible obtener un ensamblaje único.
+
+Los fragmentos secuenciados son:
+
+- AGTT
+- GTTG
+- TTGA
+- TGAC
+- GACG
+- ACGA
+- CGAA
+- GAAC
+- AACG
+
+### División en fragmentos, prefijos y sufijos 
+
+Cada fragmento tiene longitud k = 4, por lo que se divide en un prefijo de longitud 3 (k−1) y un sufijo de longitud 3 (k−1).
+De esta forma, cada lectura genera una arista dirigida desde el nodo correspondiente a su prefijo hacia el nodo de su sufijo.
+
+# insertar tabla
+
+Con estos pares se construye el conjunto de nodos:
+{AGT, GTT, TTG, TGA, GAC, ACG, CGA, GAA, AAC}
+
+### Construcción del grafo de De Bruijn
+
+Cada arista conecta un prefijo con su sufijo, representando las posibles superposiciones entre lecturas. 
+
+En la Figura 5 se muestra el grafo dirigido correspondiente:
+
+# insertar grafo brujin
+
+### Camino Euleriano
+
+Se comprueban los grados de entrada y salida de cada nodo, comprobando si se cumplen las condiciones previamente mencionadas para que sea posible trazar un camino euleriano.
+
+Nodo	Entradas	Salidas
+AGT	0	1
+GTT	1	1
+TTG	1	1
+TGA	1	1
+GAC	1	1
+ACG	2	1
+CGA	1	1
+GAA	1	1
+AAC	1	1
+
+El nodo AGT tiene una salida más que entradas, por lo que es el posible inicio.
+
+El nodo ACG tiene dos entradas y una salida, generando una bifurcación en el grafo.
+
+A pesar de que el grafo presenta un camino euleriano aparente, que sería el siguiente: 
+
+AGT → GTT → TTG → TGA → GAC → ACG → CGA → GAA → AAC → ACG
+
+E nodo ACG recibe dos aristas de entrada (desde GAC y desde AAC). Esto significa que existen dos posibles rutas que convergen en el mismo punto, generando ambigüedad sobre cuál es la secuencia correcta
+
+El grafo de De Bruijn, por sí solo, no puede decidir entre estas alternativas, ya que solo modela solapamientos de longitud k−1 sin incluir información contextual adicional (como cobertura o pares de lectura).
+
+Por este motivo, no es posible garantizar el ensamblaje de la secuencia original.
+
+## Preguntas adicionales
+
+### 1. ¿Por qué el grafo de De Bruijn no puede resolver este problema?
+ Porque las lecturas contienen repeticiones locales que generan nodos con múltiples aristas entrantes o salientes. El grafo pierde la información sobre la posición exacta de las repeticiones, produciendo caminos alternativos que son indistinguibles entre sí.
+
+### 2. ¿Qué sucede cuando existen múltiples caminos entre dos nodos?
+ Aparecen bifurcaciones o bucles en el grafo. El ensamblador no puede saber qué camino seguir, por lo que puede generar contigs fragmentados o ensamblajes erróneos si se elige un camino arbitrariamente.
+
+### 3. ¿Cómo se puede ajustar el grafo para manejar estas ambigüedades?
+
+Algunas posibilidades serían: 
+- Aumentar el valor de k para reducir repeticiones.
+- Usar lecturas emparejadas (paired-end) o de mayor longitud.
+- Incorporar pesos o frecuencias de cobertura en las aristas para discriminar los caminos más probables.
+
+Por ejemplo, si se decidiera aumentar el valor de k (k=5), se obtendrían lecturas de longitud ≥5. Con la secuencia compatible con las lecturas dadas, los **5-mers** son:
+AGTTG, GTTGA, TTGAC, TGACG, GACGA, ACGAA, CGAAC, GAACG.
+
+### Grafo de De Bruijn (nodos = 4-mers)
+
+Aristas:
+
+* AGTT→GTTG
+* GTTG→TTGA
+* TTGA→TGAC
+* TGAC→GACG
+* GACG→ACGA
+* ACGA→CGAA
+* CGAA→GAAC
+* GAAC→AACG
+
+Grados:
+
+* **AGTT** out=1,in=0 → inicio
+* **AACG** out=0,in=1 → fin
+* Resto equilibrados (in=out=1)
+
+### Camino euleriano y ensamblaje
+
+Único camino: AGTT→GTTG→TTGA→TGAC→GACG→ACGA→CGAA→GAAC→AACG.
+Reconstrucción: **AGTTGACGAACG**.
+
+El nodo ambiguo de k=4, **ACG** (in=2), se descompone en nodos distintos con k=5 (**GACG** y **AACG**). La bifurcación desaparece y el camino queda determinado, resultando en el ensamblaje único sin ambigüedad.
+
+
+
+## Conclusión
+
+En esta práctica se demuestra que el grafo de Bruijn es una herramienta potente para representar las relaciones de solapamiento entre fragmentos, pero su eficacia depende de la complejidad de la secuencia.
+
+Cuando hay regiones repetitivas o errores en la lectura, el grafo genera ambigüedades que impiden reconstruir de sin errores la secuencia original.
+
+Por ello, los ensambladores reales combinan esta representación con estrategias complementarias (como cobertura, pares de lectura y análisis estadístico) para obtener un ensamblaje genómico fiable.
