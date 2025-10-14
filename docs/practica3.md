@@ -208,7 +208,8 @@ Los fragmentos secuenciados son:
 Cada fragmento tiene longitud k = 4, por lo que se divide en un prefijo de longitud 3 (k−1) y un sufijo de longitud 3 (k−1).
 De esta forma, cada lectura genera una arista dirigida desde el nodo correspondiente a su prefijo hacia el nodo de su sufijo.
 
-# insertar tabla
+![Prefijos y Sufijos](images/tabla4.png)
+*Tabla 4. Generación de los prefijos y sufijos* 
 
 Con estos pares se construye el conjunto de nodos:
 {AGT, GTT, TTG, TGA, GAC, ACG, CGA, GAA, AAC}
@@ -219,22 +220,15 @@ Cada arista conecta un prefijo con su sufijo, representando las posibles superpo
 
 En la Figura 5 se muestra el grafo dirigido correspondiente:
 
-# insertar grafo brujin
+![Grafo de De Bruijn](images/grafo3.png)
+*Figura 5. Grafo de De Bruijn*
 
 ### Camino Euleriano
 
 Se comprueban los grados de entrada y salida de cada nodo, comprobando si se cumplen las condiciones previamente mencionadas para que sea posible trazar un camino euleriano.
 
-Nodo	Entradas	Salidas
-AGT	0	1
-GTT	1	1
-TTG	1	1
-TGA	1	1
-GAC	1	1
-ACG	2	1
-CGA	1	1
-GAA	1	1
-AAC	1	1
+![Entradas y Salidas](images/nodos.png)
+*Tabla 5. Entradas y salidas de los nodos del grafo* 
 
 El nodo AGT tiene una salida más que entradas, por lo que es el posible inicio.
 
@@ -244,7 +238,7 @@ A pesar de que el grafo presenta un camino euleriano aparente, que sería el sig
 
 AGT → GTT → TTG → TGA → GAC → ACG → CGA → GAA → AAC → ACG
 
-E nodo ACG recibe dos aristas de entrada (desde GAC y desde AAC). Esto significa que existen dos posibles rutas que convergen en el mismo punto, generando ambigüedad sobre cuál es la secuencia correcta
+El nodo ACG recibe dos aristas de entrada (desde GAC y desde AAC). Esto significa que existen dos posibles rutas que convergen en el mismo punto, generando ambigüedad sobre cuál es la secuencia correcta
 
 El grafo de De Bruijn, por sí solo, no puede decidir entre estas alternativas, ya que solo modela solapamientos de longitud k−1 sin incluir información contextual adicional (como cobertura o pares de lectura).
 
@@ -253,6 +247,7 @@ Por este motivo, no es posible garantizar el ensamblaje de la secuencia original
 ## Preguntas adicionales
 
 ### 1. ¿Por qué el grafo de De Bruijn no puede resolver este problema?
+
  Porque las lecturas contienen repeticiones locales que generan nodos con múltiples aristas entrantes o salientes. El grafo pierde la información sobre la posición exacta de las repeticiones, produciendo caminos alternativos que son indistinguibles entre sí.
 
 ### 2. ¿Qué sucede cuando existen múltiples caminos entre dos nodos?
@@ -290,7 +285,9 @@ Grados:
 ### Camino euleriano y ensamblaje
 
 Único camino: AGTT→GTTG→TTGA→TGAC→GACG→ACGA→CGAA→GAAC→AACG.
+
 Reconstrucción: **AGTTGACGAACG**.
+
 
 El nodo ambiguo de k=4, **ACG** (in=2), se descompone en nodos distintos con k=5 (**GACG** y **AACG**). La bifurcación desaparece y el camino queda determinado, resultando en el ensamblaje único sin ambigüedad.
 
