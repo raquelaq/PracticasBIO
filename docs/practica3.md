@@ -230,25 +230,36 @@ Se comprueban los grados de entrada y salida de cada nodo, comprobando si se cum
 ![Entradas y Salidas](images/nodos.png)
 *Tabla 5. Entradas y salidas de los nodos del grafo* 
 
-El nodo AGT tiene una salida más que entradas, por lo que es el posible inicio.
+Los grados in/out de cada nodo son:
 
-El nodo ACG tiene dos entradas y una salida, generando una bifurcación en el grafo.
+- **AGT** tiene in=0, out=1 → candidato a inicio
+- **ACG** tiene in=2, out=1 → candidato a fin.
+- El resto está equilibrados (in=1, out=1)
 
-A pesar de que el grafo presenta un camino euleriano aparente, que sería el siguiente: 
+Se cumplen las condiciones para la existencia de un camino euleriano que recorra todas las aristas exactamente una vez.
+
+Un recorrido válido es:
 
 AGT → GTT → TTG → TGA → GAC → ACG → CGA → GAA → AAC → ACG
 
-El nodo ACG recibe dos aristas de entrada (desde GAC y desde AAC). Esto significa que existen dos posibles rutas que convergen en el mismo punto, generando ambigüedad sobre cuál es la secuencia correcta
+La secuencia ensamblada resultante es: AGTTGACGAACG.
 
-El grafo de De Bruijn, por sí solo, no puede decidir entre estas alternativas, ya que solo modela solapamientos de longitud k−1 sin incluir información contextual adicional (como cobertura o pares de lectura).
-
-Por este motivo, no es posible garantizar el ensamblaje de la secuencia original.
+Aunque ACG reciba dos entradam no se crea una ambigüedad. Es una convergencia en el nodo final. No hay alternativas porque
+ningún nodo tiene múltiples salidas y solo hay dos nodos desbalanceados, por lo que el ensamblaje es posible y único.
 
 ## Preguntas adicionales
 
 ### 1. ¿Por qué el grafo de De Bruijn no puede resolver este problema?
 
- Porque las lecturas contienen repeticiones locales que generan nodos con múltiples aristas entrantes o salientes. El grafo pierde la información sobre la posición exacta de las repeticiones, produciendo caminos alternativos que son indistinguibles entre sí.
+En este caso, sí es posible nsamblar la secuencia, ya que el grafo cumple las condiciones de un camino euleriano (un nodo
+con una salida más que entradas y otro con una entrada más que salidas).
+
+Por tanto, el problema no está en la estructura del grafo, sino en que el modelo de De Bruijn, por sí solo, no puede 
+resolver ambigüedades en casos más complejos, cuando existen repeticiones o bifurcaciones reales.
+
+En general, un grafo de De Bruijn no puede garantizar un ensamblaje único cuando las lecturas contienen repeticiones que
+provocan múltiples aristas salientes o entrantes en un mismo nodo. En esos casos, la información sobre el orden exacto 
+de los fragmentos se pierde y aparecen caminos alternativos indistinguibles.
 
 ### 2. ¿Qué sucede cuando existen múltiples caminos entre dos nodos?
  Aparecen bifurcaciones o bucles en el grafo. El ensamblador no puede saber qué camino seguir, por lo que puede generar contigs fragmentados o ensamblajes erróneos si se elige un camino arbitrariamente.
@@ -290,8 +301,6 @@ Reconstrucción: **AGTTGACGAACG**.
 
 
 El nodo ambiguo de k=4, **ACG** (in=2), se descompone en nodos distintos con k=5 (**GACG** y **AACG**). La bifurcación desaparece y el camino queda determinado, resultando en el ensamblaje único sin ambigüedad.
-
-
 
 ## Conclusión
 
