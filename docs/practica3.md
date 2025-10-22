@@ -299,7 +299,6 @@ Grados:
 
 Reconstrucción: **AGTTGACGAACG**.
 
-
 El nodo ambiguo de k=4, **ACG** (in=2), se descompone en nodos distintos con k=5 (**GACG** y **AACG**). La bifurcación desaparece y el camino queda determinado, resultando en el ensamblaje único sin ambigüedad.
 
 ## Conclusión
