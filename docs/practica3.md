@@ -60,7 +60,7 @@ crea una conexión (arista) entre dos nodos:
 Sabiendo lo anterior, el conjunto de nodos que conformará el grafo de De Bruijn será: {GA, AC, CG, GT, TT, TA, CT, AT, TG}, y el grafo
 de De Bruijn será el que se puede ver en la Figura 1:
 
-![Grafo de De Bruijn](images/grafo1.png)
+![Grafo de De Bruijn](images/grafo11.png)
 *Figura 1. Grafo de De Bruijn*
 
 ### Camino Euleriano
@@ -147,7 +147,7 @@ El resultado es el que se puede observar en la **Tabla 3**:
 Los prefijos y sufijos el conjunto de nodos que conformará el grafo de De Bruijn será: {AGT, GTC, TCA, CAG, GTT, TTG},
 y el grafo de De Bruijn será el que se puede ver en la Figura 3:
 
-![Grafo de De Bruijn](images/grafo2.png)
+![Grafo de De Bruijn](images/grafo21.png)
 *Figura 3. Grafo de De Bruijn*
 
 ### Camino Euleriano
