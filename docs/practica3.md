@@ -244,7 +244,7 @@ AGT → GTT → TTG → TGA → GAC → ACG → CGA → GAA → AAC → ACG
 
 La secuencia ensamblada resultante es: AGTTGACGAACG.
 
-Aunque ACG reciba dos entradam no se crea una ambigüedad. Es una convergencia en el nodo final. No hay alternativas porque
+Aunque ACG reciba dos entradas, no se crea una ambigüedad. Es una convergencia en el nodo final. No hay alternativas porque
 ningún nodo tiene múltiples salidas y solo hay dos nodos desbalanceados, por lo que el ensamblaje es posible y único.
 
 ## Preguntas adicionales
@@ -267,6 +267,7 @@ de los fragmentos se pierde y aparecen caminos alternativos indistinguibles.
 ### 3. ¿Cómo se puede ajustar el grafo para manejar estas ambigüedades?
 
 Algunas posibilidades serían: 
+
 - Aumentar el valor de k para reducir repeticiones.
 - Usar lecturas emparejadas (paired-end) o de mayor longitud.
 - Incorporar pesos o frecuencias de cobertura en las aristas para discriminar los caminos más probables.
