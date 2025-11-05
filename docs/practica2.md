@@ -273,4 +273,3 @@ Se puede ver el notebook con la implementación en este enlace:
 
 [![Pipeline](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticasBIO/notebooks/pipeline.ipynb)
 
-
