@@ -100,7 +100,7 @@ El codón de paro, que es el que le dice al ribosoma que debe detener la traducc
 
 ### Traducción de la secuencia a una cadena de aminoácidos
 
-![Proceso de Traducción](images/replication.png)
+![Proceso de Traducción](images/traduccion.png)
 *Figura 3. Proceso de Traducción de ARNm a proteína*
 
 La **Figura 3** muestra el proceso de traducción de ARNm a una secuencia de aminoácidos, que formará una proteína. 
@@ -272,4 +272,3 @@ Errores en replicación o transcripción pueden corregirse o no siempre afectan 
 Se puede ver el notebook con la implementación en este enlace: 
 
 [![Pipeline](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticasBIO/notebooks/pipeline.ipynb)
-
