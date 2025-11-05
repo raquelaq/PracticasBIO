@@ -101,6 +101,7 @@ El codón de paro, que es el que le dice al ribosoma que debe detener la traducc
 ### Traducción de la secuencia a una cadena de aminoácidos
 
 ![Proceso de Traducción](images/traduccion.png)
+
 *Figura 3. Proceso de Traducción de ARNm a proteína*
 
 La **Figura 3** muestra el proceso de traducción de ARNm a una secuencia de aminoácidos, que formará una proteína. 
@@ -237,9 +238,12 @@ Se comienza con el gen FGFR2: **AAG TGA CTG CAG CAG CAG CGG CAG**
 - Hebra complementaria: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
     
 Replicación: 
+
+- Hebra original: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+- Hebra complementaria replicada: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
     
-- Hebra original complementaria: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
-- Hebra complementaria: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+- Hebra complementaria original: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
+- Hebra replicada: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
 
 
 ### Transcripción la cadena molde en ARNm.
@@ -255,17 +259,35 @@ Transcripción:
 - 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
 
 ### Traducción del ARNm en una cadena de aminoácidos.
+
+Se comienza con el siguiente transcrito de ARNm:
     
 - 5’–AAG UGA CUG CAG CAG CAG CGG CAG–3’ (ARNm)
-- Lis - codón de paro - Leu - Gln - Gln - Gln - Arg - Gln
-    - Lysina - codón de paro - Leucina - Glutamina (x3) - Arginina - Glutamina
 
+Esta secuencia de ARN mensajero puede divisidirse en codones (grupos de 3 bases) y traducirse según el código genético estándar.
+
+Asumimos que, antes de este fragmento de cadena, hay un codón de inicio AUG. Al hacerlo, se obtiene:
+
+- AAG → Lisina (Lys)
+- UGA → Codón de paro (STOP)
+
+Como en biología molecular, la traducción se detiene en el primer codón de paro, el resto de codones no llegarán a traducirse.
+
+Por tanto, la secuencia traducida quedaría así:
+
+→ Lysina (Lys) - Codón de paro (STOP)
+
+Este fragmento de ARNm codifica únicamente una lisina, seguida inmediatamente de una señal de terminación de la síntesis proteica.
 
 ### ¿Qué punto del proceso es más vulnerable a errores que afecten a la función de la proteína?
     
-El punto más vulnerable es la traducción. Durante este proceso, un error en la lectura de los codones o un cambio en el ARNm (mutación, codón de stop prematuro, inserción o deleción) altera directamente la secuencia de aminoácidos. Como el orden de aminoácidos define el plegamiento y la función de la proteína, cualquier error aquí tiene un efecto inmediato en su actividad o estabilidad.
+El punto más vulnerable es la traducción. Durante este proceso, un error en la lectura de los codones o un cambio en el 
+ARNm (mutación, codón de stop prematuro, inserción o deleción) altera directamente la secuencia de aminoácidos. Como el 
+orden de aminoácidos define el plegamiento y la función de la proteína, cualquier error aquí tiene un efecto inmediato 
+en su actividad o estabilidad.
     
-Errores en replicación o transcripción pueden corregirse o no siempre afectan a la proteína final, pero un fallo en traducción suele impactar de forma directa en la función proteica.
+Los errores en la replicación o la transcripción pueden corregirse o no siempre repercuten en la proteína final, pero un
+fallo durante la traducción suele tener un impacto directo e inmediato en la función de la proteína.
    
 ### Extensión con Biopython 
 
