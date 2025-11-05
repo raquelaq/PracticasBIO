@@ -239,11 +239,12 @@ Se comienza con el gen FGFR2: **AAG TGA CTG CAG CAG CAG CGG CAG**
     
 Replicación: 
 
-- Hebra original: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
-- Hebra complementaria replicada: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
-    
-- Hebra complementaria original: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
-- Hebra replicada: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+- Cadena original: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
+- Cadena complementaria replicada: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
+
+     
+- Cadena complementaria original: 3’–TTC ACT GAC GTC GTC GTC GCC GTC–5’
+- Cadena replicada: 5’–AAG TGA CTG CAG CAG CAG CGG CAG–3’
 
 
 ### Transcripción la cadena molde en ARNm.
