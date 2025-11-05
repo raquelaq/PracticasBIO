@@ -83,7 +83,8 @@ codificante, que es 3’ – TAC GGA CTT ACG – 5’.
 
 Se puede ver el notebook con la implementación en este enlace:
 
-[![Trancripción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/transcription.ipynb)
+[![Trancripción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/transcription.ipynb?flush_cache=true
+)
 
 
 ## Ejercicio 3 - Traducción del ARNm a proteína
@@ -271,5 +272,6 @@ Errores en replicación o transcripción pueden corregirse o no siempre afectan 
 
 Se puede ver el notebook con la implementación en este enlace: 
 
-[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/pipeline.ipynb)
+[![Traducción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/Practica2BIO/pipeline.ipynb?flush_cache=true
+)
 
