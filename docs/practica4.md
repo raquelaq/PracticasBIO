@@ -14,7 +14,10 @@ El objetivo de este análisis es explorar la relación entre el número y la mas
 inmunitarias en los distintos tejidos corporales y cuantificar su desbalance mediante el 
 índice: 
 
-PONER AQUÍ LA FÓRMULA
+$$
+MNI = \text{participación en masa} - \text{participación en número}
+$$
+
 
 Este índice permite identificar qué tejidos son “pesados pero escasos” (pocas células, pero 
 grandes o voluminosas) y cuáles son “numerosos pero ligeros” (muchas células pequeñas).
