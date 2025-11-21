@@ -50,4 +50,4 @@ El resultado final es un pipeline sencillo pero robusto que permite procesar mú
 
 Se puede ver el notebook con la implementación en este enlace:
 
-[![Transcripción](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticasBIO/notebooks/PracticaFicheros.ipynb)
+[![Práctica Ficheros](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticaFicheros/PracticaFicheros.ipynb)
