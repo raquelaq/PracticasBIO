@@ -6,7 +6,8 @@ nav:
       - Práctica 2: practica2.md
       - Práctica 3: practica3.md
       - Práctica 4: practica4.md
-      - Práctica 5: practicaFicheros.md
+      - Práctica Ficheros: practicaFicheros.md
+      - Práctica Alineamiento: practicaAlineamiento.md
 theme:
   name: material
   palette:
