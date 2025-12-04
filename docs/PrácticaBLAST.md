@@ -28,5 +28,3 @@ Este ejercicio demuestra cómo implementar análisis reproducibles sin depender 
 El notebook con el procedimiento y su explicación se pueden obtener en el siguiente enlace:
 
 [![Ejercicio 2](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticaBLAST/ejercicio2.ipynb)
-
-
