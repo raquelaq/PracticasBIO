@@ -8,6 +8,7 @@ nav:
       - Práctica 4: practica4.md
       - Práctica Ficheros: practicaFicheros.md
       - Práctica Alineamiento: practicaAlineamiento.md
+      - Práctica BLAST: practicaBLAST.md
 theme:
   name: material
   palette:
