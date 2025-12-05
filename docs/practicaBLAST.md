@@ -28,3 +28,32 @@ Este ejercicio demuestra cómo implementar análisis reproducibles sin depender 
 El notebook con el procedimiento y su explicación se pueden obtener en el siguiente enlace:
 
 [![Ejercicio 2](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticaBLAST/ejercicio2.ipynb)
+
+## Ejercicio 3. Búsqueda BLASTn filtrando por organismo
+
+En este ejercicio se implementa un programa en Python que realiza una búsqueda BLASTn utilizando una secuencia de ADN obtenida desde un archivo FASTA.
+
+Este ejercicio combina lectura de datos, ejecución remota y local de BLAST, preprocesamiento y filtrado biológico de resultados, introduciendo un pipeline más cercano a los usados en estudios reales de anotación o control de calidad de secuencias.
+
+El notebook con el procedimiento y su explicación se puede obtener en el siguiente enlace:
+
+[![Ejercicio 3](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticaBLAST/ejercicio3.ipynb)
+
+## Ejercicio 4. Comparación entre blastn, blastp, blastx, tblastn y tblastx
+
+En este ejercicio se realiza una búsqueda de ejemplo con cada una de las cinco utilidades principales de la suite BLAST:
+
+- **blastn**: ADN vs ADN 
+- **blastp**: proteína vs proteína 
+- **blastx**: ADN traducido vs proteínas 
+- **tblastn**: proteínas vs ADN traducido 
+- **tblastx**: ADN traducido vs ADN traducido
+
+Para cada herramienta se ejecuta la búsqueda online y local, permitiendo comparar rendimiento, sensibilidad y diferencias en los alineamientos obtenidos.
+
+Este ejercicio ofrece una visión global del comportamiento de cada variante de BLAST y constituye una práctica excelente para comprender cuándo es apropiado utilizar cada herramienta en función de la naturaleza de la secuencia y el objetivo biológico.
+
+El notebook con la implementación y el análisis se puede consultar en el siguiente enlace:
+
+[![Ejercicio 4](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/PracticaBLAST/ejercicio4.ipynb)
+
