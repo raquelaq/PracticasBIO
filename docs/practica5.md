@@ -27,28 +27,24 @@ PONER AQUÍ EL NOTEBOOK
 
 ## Bloque 2 -  Descarga del modelo AlphaFold
 
-En este bloque se ha trabajado con la base de datos AlphaFold para obtener el modelo estructural predicho de la proteína
-beta-2-microglobulina. Para ello, se introdujo el identificador UniProt **P61769**, desde el cual se accedió a la página
-correspondiente del modelo y se descargó el archivo en formato **PDB**. 
+En este bloque se ha trabajado con la base de datos AlphaFold para obtener el modelo estructural predicho de la
+proteína beta-2-microglobulina. Para ello, se introdujo el identificador UniProt **P61769**, accediendo a la página
+correspondiente del modelo y descargando el archivo en formato **PDB**.
 
-El modelo descargado se cargó posteriormente en Python y se visualizó utilizando la librería **py3Dmol**, con el objetivo
-de reproducir la visualización tridimensional mostrada en la propia web de AlphaFold. En ambos casos, el modelo representado
-es el mismo, variando únicamente el entorno de visualización y el grado de control sobre el estilo gráfico.
+El modelo descargado se cargó posteriormente en Python y se visualizó utilizando la librería **py3Dmol**, con el
+objetivo de reproducir la visualización tridimensional mostrada en la propia web de AlphaFold. En ambos casos,
+el modelo estructural representado es el mismo, variando únicamente el entorno de visualización y el grado de
+control sobre el estilo gráfico.
 
-Al comparar ambas visualizaciones, se observa que la **forma general de la proteína es coincidente**. La estructura presenta
-un plegamiento compacto y globular, dominado por un núcleo de láminas β característico del plegamiento tipo
-**inmunoglobulina**, lo cual es coherente con la función biológica de la proteína como componente del complejo MHC I.
+Al comparar ambas visualizaciones, se observa que la **forma general de la proteína es coincidente**. La estructura
+presenta un plegamiento compacto y globular, dominado por un núcleo de láminas β característico del plegamiento
+tipo **inmunoglobulina**, lo cual es coherente con la función biológica de la beta-2-microglobulina como componente
+del complejo MHC I.
 
-En cuanto al **patrón de colores asociado a los valores de confianza (pLDDT)**, inicialmente la estructura se mostraba sin
-colores debido a que py3Dmol no interpreta automáticamente esta información. Tras configurar explícitamente la visualización
-para utilizar el campo **B-factor** del archivo PDB, donde AlphaFold almacena los valores de pLDDT, se obtiene un patrón de
-colores equivalente al mostrado en la web de AlphaFold. Las regiones centrales de la proteína aparecen en tonos azules,
-indicando una alta confianza en la predicción estructural, mientras que algunas regiones periféricas presentan colores más
-cálidos, asociados a una mayor flexibilidad conformacional.
-
-En conjunto, la comparación confirma que la visualización en Python reproduce fielmente el modelo estructural proporcionado
-por AlphaFold, permitiendo interpretar tanto la arquitectura tridimensional de la proteína como la fiabilidad de la
-predicción.
+Aunque AlphaFold utiliza un código de colores para representar la confianza de la predicción, en este bloque el
+análisis se centra principalmente en la comparación de la arquitectura tridimensional global de la proteína.
+El estudio detallado de la distribución de colores asociada a los valores de pLDDT se aborda en bloques
+posteriores.
 
 A continuación, se puede acceder al notebook con el código en cuestión:
 
@@ -105,3 +101,67 @@ siguiente notebook:
 
 PONER EL ENLACE AL NOTEBOOK
 
+## Bloque 5 – Colorear la proteína por pLDDT
+
+En este bloque se visualiza la estructura tridimensional de la beta-2-microglobulina aplicando el esquema
+de colores oficial de AlphaFold, que permite identificar de forma directa las regiones con mayor o menor
+confianza en la predicción estructural. Para ello, se utiliza la librería py3Dmol para cargar el archivo PDB
+y asignar un color a cada residuo en función de su valor de pLDDT, almacenado en el campo B-factor.
+
+El esquema de colores utilizado sigue el estándar de AlphaFold: tonos azules para valores de pLDDT muy altos,
+cian para valores altos, amarillo para valores intermedios y naranja o rojo para regiones de baja confianza.
+Esta representación facilita distinguir visualmente las zonas estructuralmente bien definidas de aquellas
+más flexibles o inciertas.
+
+La comparación entre la visualización obtenida en Python y la mostrada en la página web de AlphaFold revela
+una distribución de colores coherente en ambos casos. Las regiones centrales de la proteína aparecen
+mayoritariamente en tonos azules y cian, indicando una alta fiabilidad de la predicción, mientras que los
+extremos y algunas regiones periféricas muestran colores más cálidos, asociados a una menor confianza
+estructural.
+
+El código empleado para generar esta visualización se encuentra disponible en el siguiente notebook:
+
+PONER EL ENLACE AL NOTEBOOK
+
+## Bloque 6 – Comparación con estructuras experimentales (opcional)
+
+Para evaluar la precisión del modelo estructural predicho por AlphaFold, se investigó la existencia de
+estructuras experimentales de la beta-2-microglobulina en el Protein Data Bank (PDB). Se seleccionó una
+estructura experimental adecuada y se comparó con la predicción de AlphaFold alineando ambas estructuras
+mediante los átomos Cα.
+
+El alineamiento permitió emparejar 98 residuos y dio lugar a un valor de RMSD de **4.350 Å**, lo que indica una
+concordancia global moderada entre ambas estructuras. La superposición visual muestra una buena coincidencia
+en el núcleo estructural de la proteína, dominado por láminas β, mientras que las principales diferencias se
+concentran en regiones periféricas y más flexibles, como la región helicoidal alargada.
+
+Estos resultados sugieren que el modelo de AlphaFold reproduce de forma adecuada la arquitectura global de la
+proteína, aunque presenta diferencias locales respecto a la estructura experimental, especialmente en zonas
+con mayor flexibilidad conformacional.
+
+El código generado para llevar a cabo este bloque, se encuentra en el siguiente enlace:
+
+PONER EL ENLACE AL NOTEBOOK
+
+## Bloque 7 – Mapa de distancias internas Cα–Cα
+
+En este bloque se analiza la organización espacial de la beta-2-microglobulina mediante un mapa de distancias
+internas entre los átomos Cα del modelo predicho por AlphaFold. Este mapa de calor permite identificar regiones
+compactas de la proteína, donde las distancias entre residuos son pequeñas, así como zonas más extendidas o
+flexibles, caracterizadas por distancias mayores.
+
+El mapa obtenido muestra un patrón denso y continuo en gran parte de la matriz, lo que indica la presencia de
+un núcleo estructural compacto, coherente con el plegamiento globular de la proteína. En contraste, las
+regiones correspondientes a los extremos de la secuencia presentan un patrón más difuso, asociado a una mayor
+flexibilidad conformacional.
+
+Al relacionar el mapa de distancias con los valores de pLDDT proporcionados por AlphaFold, se observa que las
+zonas compactas coinciden mayoritariamente con residuos de alta confianza, mientras que las regiones más
+difusas corresponden a residuos con valores de pLDDT más bajos, localizados principalmente en los extremos
+N- y C-terminales. Estos resultados refuerzan la conclusión de que el modelo estructural predicho presenta
+una alta calidad global, con pequeñas regiones flexibles en zonas periféricas de la proteína.
+
+El código empleado para generar el mapa de distancias y el análisis detallado del mismo se encuentra disponible
+en el siguiente notebook:
+
+PONER EL ENLACE AL NOTEBOOK
