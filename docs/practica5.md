@@ -23,7 +23,8 @@ La proteína está revisada en UniProtKB/Swiss-Prot, lo que indica que su anotac
 A continuación, se puede acceder a un Notebook en el que se verifica el contenido del archivo FASTA mostrando por pantalla 
 su longitud total y los 20 primeros aminoácidos de la secuencia:
 
-[Ver notebook – Bloque 1](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque1.ipynb)
+[![Bloque1](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque1.ipynb)
+
 
 ## Bloque 2 -  Descarga del modelo AlphaFold
 
@@ -48,7 +49,7 @@ posteriores.
 
 A continuación, se puede acceder al notebook con el código en cuestión:
 
-[Ver notebook – Bloque 2](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque2.ipynb)
+[![Bloque2](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque2.ipynb)
 
 ## Bloque 3 - Extraer pLDDT del PDB
 
@@ -69,7 +70,7 @@ estructura tridimensional de la proteína.
 El procedimiento completo, junto con el código empleado y el análisis detallado de los resultados, puede
 consultarse en el siguiente notebook:
 
-[Ver notebook – Bloque 3](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque3.ipynb)
+[![Bloque3](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque3.ipynb)
 
 ## Bloque 4 – Gráfico de pLDDT por residuo
 
@@ -99,7 +100,7 @@ global muy alta, con pequeñas regiones de menor confianza asociadas a zonas per
 El código empleado para generar el gráfico y el análisis detallado del mismo se encuentra disponible en el
 siguiente notebook:
 
-[Ver notebook – Bloque 4](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque4.ipynb)
+[![Bloque4](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque4.ipynb)
 
 ## Bloque 5 – Colorear la proteína por pLDDT
 
@@ -121,7 +122,7 @@ estructural.
 
 El código empleado para generar esta visualización se encuentra disponible en el siguiente notebook:
 
-[Ver notebook – Bloque 5](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque5.ipynb)
+[![Bloque1](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque5.ipynb)
 
 ## Bloque 6 – Comparación con estructuras experimentales (opcional)
 
@@ -141,7 +142,7 @@ con mayor flexibilidad conformacional.
 
 El código generado para llevar a cabo este bloque, se encuentra en el siguiente enlace:
 
-[Ver notebook – Bloque 6](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque6.ipynb)
+[![Bloque6](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque6.ipynb)
 
 ## Bloque 7 – Mapa de distancias internas Cα–Cα
 
@@ -164,4 +165,4 @@ una alta calidad global, con pequeñas regiones flexibles en zonas periféricas 
 El código empleado para generar el mapa de distancias y el análisis detallado del mismo se encuentra disponible
 en el siguiente notebook:
 
-[Ver notebook – Bloque 7](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Completo.ipynb)
+[![Bloque7](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Completo.ipynb)
