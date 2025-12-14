@@ -70,7 +70,7 @@ estructura tridimensional de la proteína.
 El procedimiento completo, junto con el código empleado y el análisis detallado de los resultados, puede
 consultarse en el siguiente notebook:
 
-[![Bloque3](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque3.ipynb)
+[![Bloque3](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque3y4.ipynb)
 
 ## Bloque 4 – Gráfico de pLDDT por residuo
 
@@ -100,7 +100,7 @@ global muy alta, con pequeñas regiones de menor confianza asociadas a zonas per
 El código empleado para generar el gráfico y el análisis detallado del mismo se encuentra disponible en el
 siguiente notebook:
 
-[![Bloque4](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque4.ipynb)
+[![Bloque4](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/AlphaFold/Bloque3y4.ipynb)
 
 ## Bloque 5 – Colorear la proteína por pLDDT
 
