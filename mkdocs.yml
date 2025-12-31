@@ -10,6 +10,7 @@ nav:
       - Práctica Ficheros: practicaFicheros.md
       - Práctica Alineamiento: practicaAlineamiento.md
       - Práctica BLAST: practicaBLAST.md
+      - Práctica Árboles Filogenéticos: practicaArbolesFilogeneticos.md
 theme:
   name: material
   palette:
