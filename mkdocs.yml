@@ -11,6 +11,7 @@ nav:
       - Práctica Alineamiento: practicaAlineamiento.md
       - Práctica BLAST: practicaBLAST.md
       - Práctica Árboles Filogenéticos: practicaArbolesFilogeneticos.md
+      - Práctica Estructuras Tridimensionales: practica6.md
 theme:
   name: material
   palette:
