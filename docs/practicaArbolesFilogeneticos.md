@@ -79,15 +79,5 @@ El notebook que recoge todo el desarrollo del Ejercicio 3 puede consultarse aqu�
 
 [![Ejercicio 3](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/ArbolesFilogeneticos/ejercicio3.ipynb)
 
-## Ejercicio 4. Generación de secuencias aleatorias y almacenamiento en FASTA
-
-En este ejercicio se desarrolla un script en Python que genera automáticamente cinco secuencias de ADN de cinco nucleótidos cada una, de forma aleatoria, y las almacena en un archivo FASTA válido.
-
-Este ejercicio introduce el uso de datos sintéticos como herramienta didáctica para estudiar el comportamiento de los métodos filogenéticos en ausencia de una señal evolutiva real, reforzando la comprensión de sus limitaciones y supuestos.
-
-El notebook con la implementación del script puede consultarse aquí:
-
-[![Ejercicio 3.1](https://img.shields.io/badge/Ver_Notebook-GitHub-blue?logo=github)](https://nbviewer.org/url/raquelaq.github.io/ArbolesFilogeneticos/ejercicio3_1.ipynb)
-
 
 Esta práctica ofrece una visión progresiva del análisis filogenético, desde la lectura e interpretación de árboles hasta su construcción y comparación mediante distintos métodos. El uso de Biopython permite integrar de forma natural programación, análisis de datos y razonamiento biológico, acercando el trabajo realizado a un flujo de trabajo real en bioinformática.
